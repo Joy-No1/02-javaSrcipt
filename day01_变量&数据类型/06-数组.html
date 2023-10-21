@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+</head>
+
+<body>
+    <script>
+        let nameArr = [18, 20, 1, 23, 123, 23, 54, 65];
+        for (let i = 0; i < nameArr.length-1; i++) {
+            for (let x = 0; x < nameArr.length-1-i; x++) {
+                if (nameArr[x] < nameArr[x + 1]) {
+                    let temp;
+                    temp = nameArr[x];
+                    nameArr[x] = nameArr[x + 1];
+                    nameArr[x + 1] = temp;
+                }
+            }
+        }
+        console.log(nameArr);
+    </script>
+</body>
+
+</html>
