@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99乘法表</title>
+    <style>
+        span {
+            border: 1px solid pink;
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 10px;
+            width: 135px;
+            text-align: center;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        for (let i = 1; i <= 9; i++) {
+            for (let x = 1; x <= i; x++) {
+                document.write(`<span>${x} x ${i} = ` + i * x + '</span>');
+            }
+            document.write('<br>')
+        }
+    </script>
+</body>
+
+</html>
