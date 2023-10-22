@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while案例</title>
+</head>
+
+<body>
+    <script>
+        while (true) {
+            let num = +prompt(
+                `请选择操作:
+                1.存钱
+                2.取钱
+                3.查看余额
+                4.退出
+            `);
+            if(num===4){
+                break;
+            }
+            switch (num) {
+                case 1:
+                    alert('aaa')
+                    break;
+                case 2:
+                    alert('bbb')
+                    break;
+                case 3:
+                    alert('ccc')
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
