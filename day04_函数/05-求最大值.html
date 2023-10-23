@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最大值</title>
+</head>
+
+<body>
+    <script>
+
+        function getMax(num1 = 0, num2 = 0) {
+            return num1 > num2 ? num1 : num2;
+        }
+        
+
+        function getArrMax(arr = []) {
+            let maxNum = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                if (maxNum < arr[i + 1]) {
+                    maxNum = arr[i + 1];
+                }
+            }
+            return maxNum;
+        }
+
+
+    </script>
+</body>
+
+</html>

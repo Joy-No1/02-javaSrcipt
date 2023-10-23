@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数使用</title>
+    <style>
+        div {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="name">1</div>
+
+
+    <script>
+        //函数声明
+        function test(x, y) {
+            return x > y ? x : y;
+        }
+
+        document.getElementById('name').onclick = function () {
+            alert("Hello JS");
+        }
+
+        let num = test(10, 20);
+        console.log(num);
+    </script>
+</body>
+
+</html>
