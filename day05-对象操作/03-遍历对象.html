@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历对象</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // 定义对象
+        let obj = {
+            name: 'apple',
+            age: 20,
+            gender: '男',
+            cando: function playGame() {
+                console.log('I can playGames!!');
+            }
+        }
+
+        // 推荐 for in 遍历对象
+        for (const key in obj) {
+            if (Object.hasOwnProperty.call(obj, key)) {
+                console.log(key+":"+obj[key]);
+
+            }
+        }
+    </script>
+</body>
+
+</html>

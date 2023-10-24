@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象基本使用</title>
+</head>
+
+<body>
+    <!-- 
+        对象:可以理解为一种无序集合  
+        对象由属性和方法组成
+     -->
+    <script>
+        // 声明 let 对象名 = {}
+        let Phone = {
+            brand: 'apple',
+            color: 'black',
+            price: 9999,
+            call: function () {
+                console.log("打电话");
+            },
+            playGame: function () {
+                console.log("玩游戏");
+            }
+        }
+
+        // 新增/修改属性
+        Phone.weight = '222g';
+        console.log(Phone);
+
+        // 删除属性(不推荐)
+        delete Phone.weight;
+        console.log(Phone);
+
+        // 查  对象名['属性名']  对象名.属性名
+        console.log('-----------------------');
+        console.log(Phone['brand']);
+    </script>
+</body>
+
+</html>
