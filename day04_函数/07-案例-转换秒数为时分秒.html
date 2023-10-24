@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转换秒数为时分秒</title>
+</head>
+
+<body>
+    <script>
+        let totalSecond = +prompt("请输入一个秒数:");
+        function transport(t) {
+            console.log(t);
+            // 转换
+            let = h = parseInt(t / 60 / 60 % 24);
+            let = m = parseInt(t / 60 % 60);
+            let = s = parseInt(t % 60);
+            console.log(h, m, s);
+            h = h < 10 ? '0' + h : h;
+            m = m < 10 ? '0' + m : m;
+            s = s < 10 ? '0' + s : s;
+            return `转换后为${h}:${m}:${s}`;
+        }
+        let str = transport(totalSecond);
+        document.write(str);
+    </script>
+</body>
+
+</html>
