@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学内置对象</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+        // PI 圆周率
+        console.log(Math.PI);
+        // ceil
+        console.log('向上取整' + '\t' + Math.ceil(1.1));
+        // floor
+        console.log('向下取整' + '\t' + Math.floor(1.9));
+        // round
+        console.log('四舍五入' + '\t' + Math.round(1.2));
+        console.log('四舍五入' + '\t' + Math.round(-1.5));
+
+        // parseInt(1.2)  1
+        console.log('parseInt(1.33)' + '\t' + parseInt(1.33));
+
+        // max 
+        console.log('max' + '\t' + Math.max(1, 2, 3, 4));
+
+        // min 
+        console.log('min' + '\t' + Math.min(1, 2, 3, 4));
+
+
+        // random() 返回0-1之间 包括0不包括1的随机小数:n [0,1)
+        console.log('random\t' + Math.random());
+        console.log('生成0-10之间的随机整数:\t' + Math.floor(Math.random() * 11));
+
+        // 获取数组中任意一个元素
+        let arr = ['orange', 'red', 'balck']
+        let random = Math.floor(Math.random() * 3);
+        console.log(arr[random]);
+
+        // 生成min-max之间的随机数
+        let min = prompt('请输入N:');
+        let max = prompt('请输入M:');
+        console.log(Math.floor(Math.random() * (max - min + 1) + min));
+    </script>
+</body>
+
+</html>
