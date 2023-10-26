@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作元素样式属性</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        const box = document.querySelector('.box');
+        box.style.width = '300px';
+        box.style.backgroundColor = 'hotpink';
+        box.style.border = '2px solid black';
+
+    </script>
+</body>
+
+</html>

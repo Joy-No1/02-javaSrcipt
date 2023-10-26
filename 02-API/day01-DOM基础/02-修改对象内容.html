@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改对象内容</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">我是文字内容</div>
+    <script>
+        const box = document.querySelector('.box');
+
+        // innerText 不解析标签  innerHTML 解析标签
+
+        // console.log(box.innerText = '我是一个盒子');
+        console.log(box.innerHTML = '<strong>我要更换</strong>');
+    </script>
+</body>
+
+</html>
