@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器-间歇函数</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+        // setInterval(函数, 间隔时间)
+        /*  setInterval(function () {
+             console.log('一秒执行一次');
+         }, 1000) */
+
+
+        function fn() {
+            console.log('一秒执行一次');
+        }
+
+
+        // setInterval(函数, 间隔时间);
+        let time = setInterval(fn, 1000);
+        console.log(time);
+
+        let time1 = setInterval(function () { }, 1000);
+        console.log(time1);
+
+        // 关闭定时器  
+        // clearInterval(变量名);
+        clearInterval(time1);
+
+    </script>
+</body>
+
+</html>
