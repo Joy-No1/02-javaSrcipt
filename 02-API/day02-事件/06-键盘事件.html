@@ -1,0 +1,33 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-10-29 16:58:39
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-10-29 16:58:42
+ * @FilePath: /02-javaScript/02-API/day02-事件/06-键盘事件.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘事件</title>
+</head>
+
+<body>
+    <input type="text">
+
+    <script>
+        const input = document.querySelector('input');
+        input.addEventListener('keydown', function () {
+            console.log('键盘按下');
+        })
+
+        input.addEventListener('keyup', function () {
+            console.log('键盘弹起');
+        })
+        
+    </script>
+</body>
+
+</html>
