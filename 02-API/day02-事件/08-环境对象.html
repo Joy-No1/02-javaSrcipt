@@ -1,0 +1,30 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-10-30 15:25:43
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-10-30 15:28:35
+ * @FilePath: /02-javaScript/02-API/day02-事件/08-环境对象.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>环境对象</title>
+</head>
+
+<body>
+    <script>
+        // console.log(this);
+
+
+        const btn = document.querySelector('btn');
+        btn.addEventListener('click', function () {
+            console.log(this);
+        })
+    </script>
+</body>
+
+</html>

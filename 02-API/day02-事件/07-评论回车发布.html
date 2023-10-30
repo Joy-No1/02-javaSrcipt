@@ -122,6 +122,8 @@
   <script>
     const tx = document.querySelector('#tx');
     const total = document.querySelector('.total');
+    const item = document.querySelector('.item');
+    const text = document.querySelector('.text');
     tx.addEventListener('focus', function () {
       total.style.opacity = 1;
     })
@@ -132,8 +134,21 @@
 
     // 检测用户输入
     tx.addEventListener('input', function () {
- 
       total.innerHTML = `${tx.value.length}/200字`;
+    });
+
+
+    // 按下回车 发布评论
+    tx.addEventListener('keyup', function (e) {
+      if (e.key === 'Enter') {
+        if (tx.value.trim()) {
+          item.style.display = 'block';
+          // console.log(tx.value);
+          text.innerHTML = tx.value;
+        }
+        tx.value = '';
+        total.innerHTML = '0/200字';
+      }
     })
   </script>
 </body>
