@@ -1,0 +1,53 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-10-31 17:35:43
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-10-31 17:37:59
+ * @FilePath: /02-javaScript/02-API/day03-事件进阶&案例/07-offsetLeft.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px;
+        }
+
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+
+    <script>
+        const div = document.querySelector('div');
+        console.log(div.offsetLeft);
+
+
+        const p = document.querySelector('p');
+        console.log(p.offsetLeft);
+    </script>
+</body>
+
+</html>

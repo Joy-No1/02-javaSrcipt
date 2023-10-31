@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面加载事件</title>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            // 等待页面所有资源加载完毕执行回调函数
+            const btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                alert('aaa');
+            })
+        })
+
+
+        img.addEventListener('load', function () {
+            //等待图片加载完毕再执行
+        })
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // 无需等待样式表,图像等完全加载
+        })
+    </script>
+
+    <img src="./images/avatar.jpg" alt="">
+    <button></button>
+</body>
+
+</html>
