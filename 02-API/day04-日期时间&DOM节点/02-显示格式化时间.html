@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示时间</title>
+    <style>
+        div {
+            width: 300px;
+            height: 40px;
+            border: 1px solid pink;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+    <script>
+
+        const div = document.querySelector('div');
+        function getMyDate() {
+            // let h = date.getHours();
+            // h = h < 10 ? '0' + h : h;
+            let seconds;
+            const date = new Date();
+            return `今天是${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日 
+              ${date.getHours()}:${date.getMinutes()}:${seconds = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()
+                }`;
+        }
+
+
+
+        setInterval(function () {
+            div.innerHTML = getMyDate();
+        }, 1);
+
+
+        /*   const div = document.querySelector('div');
+          const date = new Date();
+          div.innerHTML = date.toLocaleString(); */
+
+        //   获取时间戳
+        const date = new Date();
+        //1. getTime()
+        console.log(date.getTime());
+        //2. +new Date()
+        console.log(+new Date());
+        // 3 Date.now()
+        console.log(Date.now());
+
+
+        // 得到指定时间的时间戳
+        console.log('-----------------------');
+        console.log(+new Date('2023-11-01 17:00:00'));
+    </script>
+</body>
+
+
+</html>
