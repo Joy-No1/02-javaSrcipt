@@ -1217,29 +1217,80 @@
 
 
   <script>
-    const elevator = document.querySelector('.xtx-elevator');
+    (function () {
+      const elevator = document.querySelector('.xtx-elevator');
+      const entry = document.querySelector('.xty_entry');
+      // ===
+      window.addEventListener('scroll', function () {
+        // 被卷去的头部大于300
+        const n = document.documentElement.scrollTop;
+        // if (n >= 300) {
+        //   elevator.style.opacity = 1;
+        // } else {
+        //   elevator.style.opacity = 0;
+
+        // }
+
+        elevator.style.opacity = n >= entry.offsetTop ? 1 : 0;
+      });
+
+      // 点击返回页面顶部
+      const backTop = document.querySelector('#backTop');
+      backTop.addEventListener('click', function () {
+        document.documentElement.scrollTop = 0;
+      })
+
+    })();
+
+    (function () {
 
 
-    const entry = document.querySelector('.xty_entry');
-    // ===
-    window.addEventListener('scroll', function () {
-      // 被卷去的头部大于300
-      const n = document.documentElement.scrollTop;
-      // if (n >= 300) {
-      //   elevator.style.opacity = 1;
-      // } else {
-      //   elevator.style.opacity = 0;
+      const list = document.querySelector('.xtx-elevator-list');
+      list.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A' && e.target.dataset.name) {
+          // document.querySelector('.xtx-elevator-list .active').classList.remove('active');
+          const old = document.querySelector('.xtx-elevator-list .active');
+          // console.log(old);
+          if (old) {
+            old.classList.remove('.active');
+          }
+          e.target.classList.add('active');
 
-      // }
+          // console.log(e.target.dataset.name);
+          // console.log(document.querySelector(`.xtx_goods_${e.target.dataset.name}`));
+          const top = document.querySelector(`.xtx_goods_${e.target.dataset.name}`).offsetTop;
+          document.documentElement.scrollTop = top;
+        }
+      });
 
-      elevator.style.opacity = n >= entry.offsetTop ? 1 : 0;
-    });
 
-    // 点击返回页面顶部
-    const backTop = document.querySelector('#backTop');
-    backTop.addEventListener('click', function () {
-      document.documentElement.scrollTop = 0;
-    })
+      window.addEventListener('scroll', function () {
+        const old = document.querySelector('.xtx-elevator-list .active');
+        // console.log(old);
+        if (old) {
+          old.classList.remove('.active');
+        }
+        // 判断页面当前滑动的位置 选择小盒子
+        const news = document.querySelector('.xtx_goods_new');
+        const popular = document.querySelector('.xtx_goods_popular');
+        const brand = document.querySelector('.xtx_goods_brand');
+        const topic = document.querySelector('.xtx_goods_topic');
+
+        const n = document.documentElement.scrollTop;
+        if (n >= news.offsetTop && n < popular.offsetTop) {
+          // 选择第一个小盒子
+          document.querySelector('[data-name=new]').classList.add('active');
+        } else if (n >= popular.offsetTop && n < brand.offsetTop) {
+          document.querySelector('[data-name=popular]').classList.add('active');
+        } else if (n >= brand.offsetTop && n < topic.offsetTop) {
+          document.querySelector('[data-name=brand]').classList.add('active');
+        } else if (n >= topic.offsetTop) {
+          document.querySelector('[data-name=topic]').classList.add('active');
+        }
+      });
+    })();
+
+
 
   </script>
 </body>
