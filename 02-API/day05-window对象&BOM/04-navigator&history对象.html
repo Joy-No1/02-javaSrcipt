@@ -1,0 +1,36 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-05 15:33:51
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-05 15:42:17
+ * @FilePath: /02-javaScript/02-API/day05-window对象&BOM/04-navigator对象.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigator&history对象</title>
+</head>
+
+<body>
+
+    <button>后退</button>
+    <button>前进</button>
+    <script>
+        console.log(navigator);
+        console.log(history);
+        const back = document.querySelector('button:first-child');
+        const forward = back.nextElementSibling;
+        back.addEventListener('click', function () {
+            history.back();
+        });
+
+        back.addEventListener('click', function () {
+            history.forward();
+        });
+    </script>
+</body>
+
+</html>

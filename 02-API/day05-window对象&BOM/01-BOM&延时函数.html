@@ -1,0 +1,50 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-05 14:48:45
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-05 14:54:39
+ * @FilePath: /02-javaScript/02-API/day05-window对象&BOM/01-BOM&延时函数.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM&延时函数</title>
+    <style>
+        img {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <img src="./images/ad.png" alt="">
+
+    <script>
+        // console.log(document === window.document);
+
+
+        // 延时函数 setTimeOut(回调函数,等待的毫秒数)
+        setTimeout(function () {
+            console.log("aaa");
+        }, 2000);
+
+
+        // 清除延迟函数  clearTimeOut()
+
+
+        const img = document.querySelector('img');
+        setTimeout(function () {
+            img.style.display = 'none';
+        }, 3000);
+    </script>
+</body>
+
+</html>
