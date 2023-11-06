@@ -1,0 +1,49 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-06 14:52:46
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-06 15:08:30
+ * @FilePath: /02-javaScript/02-API/day06-正则/02-元字符.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元字符</title>
+</head>
+
+<body>
+
+
+    <script>
+        // 1 边界符
+        console.log(/^a/.test('miss'));  //必须以a开头
+        console.log(/^a$/.test('miss')); //必须以a开头 以a结尾
+
+        console.log('--------------------');
+        // 2 元字符量词
+        // * 重复0或多次
+        console.log(/^哈*$/.test('哈'));
+
+        console.log('--------------------');
+        // + 出现一次或更多次
+        console.log(/^哈+$/.test('哈'));
+
+        console.log('--------------------');
+        // ? 重复0次或一次
+        console.log(/^哈?$/.test('哈'));
+
+        console.log('--------------------');
+        // 3 量词
+        // {n}  重复n次   {n,}  重复n次或更多次 {n,m}重复n次到m次
+
+        console.log(/^a{4}R$/);
+
+
+
+    </script>
+</body>
+
+</html>
