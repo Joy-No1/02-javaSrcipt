@@ -1,0 +1,31 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-07 15:15:22
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-07 15:20:18
+ * @FilePath: /02-javaScript/03-进阶/day01-作用域&GC&箭头函数/01-闭包.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-闭包</title>
+</head>
+
+<body>
+    <script>
+        function outer() {
+            let a = 10;
+            function inner() {
+                console.log(a);
+            }
+            inner();
+        }
+        const fun = outer();
+        fun();
+    </script>
+</body>
+
+</html>

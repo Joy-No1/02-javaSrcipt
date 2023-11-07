@@ -1,0 +1,37 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-07 17:10:13
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-07 17:31:17
+ * @FilePath: /02-javaScript/03-进阶/day01-作用域&GC&箭头函数/05-解构赋值.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-数组解构</title>
+</head>
+
+<body>
+
+
+    <script>
+        const arr = [100, 60, 80];
+        const [max, min, avg] = arr;
+        console.log(max);
+        console.log(avg);
+
+
+        let a = 1;
+        let b = 2;
+        [b, a] = [a, b];
+
+        console.log(a, b);
+
+
+    </script>
+</body>
+
+</html>

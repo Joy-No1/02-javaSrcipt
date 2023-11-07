@@ -1,0 +1,39 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-07 15:49:50
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-07 16:03:45
+ * @FilePath: /02-javaScript/03-进阶/day01-作用域&GC&箭头函数/03-函数动态参数.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数动态参数</title>
+</head>
+
+<body>
+
+
+    <script>
+        /*     function getSum() {
+                console.log(arguments);
+            }
+    
+            getSum(2, 3);
+            getSum(1, 2, 3); */
+
+
+        function getSum(a, b, ...arr) {
+            for (let i = 0; i < arr.length; i++) {
+                console.log(arr[i]);
+            }
+        }
+        getSum(2, 3);
+        getSum(1, 2, 3);
+    </script>
+</body>
+
+</html>

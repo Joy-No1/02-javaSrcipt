@@ -1,0 +1,68 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-07 16:08:54
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-07 16:22:51
+ * @FilePath: /02-javaScript/03-进阶/day01-作用域&GC&箭头函数/04-箭头函数.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const fn = function () {
+            console.log(123);
+        }
+
+        const fun = () => {
+            console.log(123);
+        }
+
+        // 只有一个参数的时候 可以省略小括号
+        const fun1 = x => {
+            console.log(x);
+            return x + x;
+        }
+
+        // 只有一行代码 可以省略return
+        const fun2 = x => x + x;
+
+        // 箭头函数可以直接返回一个对象
+        const fun3 = (name) => {
+            ({ uname: name });
+        }
+
+        // 利用箭头函数求和
+        const getSum = (...arr) => {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum;
+        }
+
+        // this
+        const obj = { uname: 'pink', sayHi: () => { console.log(this); } }
+        obj.sayHi();
+
+        fn();
+        fun();
+        fun1();
+        fun2();
+        fun3("刘德华");
+
+        console.log(getSum(2, 3, 4, 5));
+    </script>
+</body>
+
+</html>
