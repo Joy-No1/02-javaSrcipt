@@ -1,0 +1,51 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-08 14:43:03
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-08 15:08:22
+ * @FilePath: /02-javaScript/03-进阶/day02/01-创建对象.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建对象</title>
+</head>
+
+<body>
+
+
+    <script>
+        /* const obj = new Object();
+        obj.name = 'pig'; */
+
+        /*  const obj = new Object({ name: 'pig' });
+         console.log(obj); */
+
+        // 构造函数创建对象
+        function Pig(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        const peiqi = new Pig('peiqi', 18);
+        const xiaohuo = new Pig('xiaohuo', 22);
+
+        function Goods(name, price, count) {
+            this.name = name;
+            this.price = price;
+            this.count = count;
+        }
+
+        const mi = new Goods('小米', 1999, 20);
+        const wei = new Goods('华为', 1999, 20);
+
+        // 拷贝对象
+        const oo = {};
+        Object.assign(oo, mi);
+    </script>
+</body>
+
+</html>

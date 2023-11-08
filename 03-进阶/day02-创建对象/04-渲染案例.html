@@ -1,0 +1,31 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-08 16:57:25
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-08 17:02:30
+ * @FilePath: /02-javaScript/03-进阶/day02-创建对象/04-渲染案例.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+
+
+    <script>
+        const gift = '50g的茶叶,清洗球';
+        // 根据数组元素的个数生成对应的span
+        const str = gift.split(',').map(item => `<span>[赠品] ${item}</span> <br>`).join('');
+
+
+        document.querySelector('div').innerHTML = str;
+    </script>
+</body>
+
+</html>
