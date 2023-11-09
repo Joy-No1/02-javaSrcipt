@@ -1,0 +1,50 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-09 16:20:18
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-09 16:25:03
+ * @FilePath: /02-javaScript/03-进阶/day03-深入面向对象/03-原型继承.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原型继承</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const Person = {
+            eays: 2,
+            head: 1
+        }
+
+        function Woman() {
+
+        }
+
+        // 继承
+        Woman.prototype = Person;
+
+        const red = new Woman();
+        console.log(red);
+
+
+        function Man() {
+
+        }
+
+        Man.prototype = Person;
+        Man.prototype.constructor = Man;
+
+        const pig = new Man();
+        console.log(pig);
+    </script>
+</body>
+
+</html>

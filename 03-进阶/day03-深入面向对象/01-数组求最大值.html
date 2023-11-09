@@ -1,0 +1,31 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-09 15:04:47
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-09 15:08:08
+ * @FilePath: /02-javaScript/03-进阶/day03-深入面向对象/01-数组求最大值.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组求最大值</title>
+</head>
+
+<body>
+
+
+    <script>
+        // const arr = new Array(1, 2);
+        const arr = [1, 2, 3];
+        Array.prototype.max = function (arr) {
+            return Math.max(...this);
+        }
+
+        console.log(arr.max());
+    </script>
+</body>
+
+</html>
