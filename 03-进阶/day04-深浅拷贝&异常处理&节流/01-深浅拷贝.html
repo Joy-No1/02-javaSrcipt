@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深浅拷贝</title>
+</head>
+
+<body>
+
+
+    <script>
+        const obj = { name: 'pink', age: 18, family: { baby: '小pink' } };
+        // 浅拷贝  拷贝对象之后 里面的属性值是简单数据类型直接拷贝值
+        const o = { ...obj };
+        // console.log(o);
+        // console.log(o === obj);
+
+        const oo = {};
+        Object.assign(oo, obj);
+        oo.age = 20;
+        // console.log(oo);
+
+        oo.family.baby = '小小pink';
+
+        // 深拷贝  
+        const ooo = {};
+        function deepCopy(newObj, oldObj) {
+            for (const key in oldObj) {
+                if (Object.hasOwnProperty.call(oldObj, key)) {
+                    if (oldObj[key] instanceof Array) {
+                        newObj[key] = [];
+                        deepCopy();
+                    } else {
+                        newObj[key] = oldObj[key];
+                    }
+                }
+            }
+        }
+
+        deepCopy(ooo, o);
+        console.log(ooo);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-11 15:51:28
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-11 16:18:08
+ * @FilePath: /02-javaScript/03-进阶/day04-深浅拷贝&异常处理&节流/05-this指向.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this指向</title>
+</head>
+
+
+<body>
+
+
+    <script>
+        // 普通函数this  谁调用 指向谁
+        console.log(this);  //window
+
+        function fun() {
+            console.log(this);  //window
+        }
+
+        // 箭头函数this  箭头函数不存在this  沿用上一级的  
+
+
+
+        //  改变this  使用call()方法调用函数 
+        const obj = { name: 'pink' };
+        function fun2(x, y) {
+            console.log(this);
+            console.log(x + y);
+        }
+
+        fun2.call(obj, 1, 2);
+
+        //  改变this  使用apply()方法调用函数 
+        function fun3(x, y) {
+            console.log(this);
+            console.log(x + y);
+        }
+
+        fun3.apply(obj, [1, 2]);
+
+        //  改变this  使用bind()方法不会调用函数  但是能改变this指向  返回值为原函数的拷贝(新函数)
+        function fun4() {
+            console.log(this);
+        }
+
+        const newObj = fun4.bind(obj);
+        console.log(newObj);
+
+
+    </script>
+</body>
+
+</html>

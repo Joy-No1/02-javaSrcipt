@@ -1,0 +1,27 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-11 15:30:22
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-11 15:32:51
+ * @FilePath: /02-javaScript/03-进阶/day04-深浅拷贝&异常处理&节流/03-JSON实现深拷贝.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON实现深拷贝</title>
+</head>
+
+<body>
+
+
+    <script>
+        const obj = { name: 'lmx', age: 18, hobby: ['乒乓球', '足球'], family: { baby: 'llmmxx' } };
+        const o = JSON.parse(JSON.stringify(obj));
+        console.log(o);
+    </script>
+</body>
+
+</html>

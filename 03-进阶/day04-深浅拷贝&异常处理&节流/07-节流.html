@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: whitesmoke;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <script src="./lodash.min.js"></script>
+    <script>
+
+        // 节流  单位时间内,频繁触发事件,只执行一次
+        const box = document.querySelector('.box');
+        let i = 1;
+        function mouseMove() {
+            box.innerHTML = i++;
+        }
+
+        // box.addEventListener('mousemove', _.throttle(mouseMove, 500));
+
+        // 手动实现节流函数  利用setTimeOut()
+
+        function throttle(fn, t) {
+            let timer = null;
+            return function () {
+                if (!timer) {
+                    timer = setTimeout(function () {
+                        fn();
+                        // 清空定时器
+                        timer = null;
+                    }, t);
+                }
+            }
+        }
+
+        box.addEventListener('mousemove', throttle(mouseMove, 500));
+
+    </script>
+</body>
+
+</html>

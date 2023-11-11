@@ -1,0 +1,49 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-11 15:35:24
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-11 15:48:55
+ * @FilePath: /02-javaScript/03-进阶/day04-深浅拷贝&异常处理&节流/04-异常处理.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>异常处理</title>
+</head>
+
+<body>
+    <p>123</p>
+
+    <script>
+
+        /*   function fun(x, y) {
+              if (!x || !y) {
+                  // throw '参数为空';
+                  throw new Error('参数为空');
+              }
+              return x + y;
+          }
+   */
+        function fun1(x, y) {
+            try {
+                const p = document.querySelector('p');
+                p.style.color = 'red';
+            } catch (error) {
+                console.log(error.message);
+                return;
+            } finally {
+                alert('你好');
+            }
+
+        }
+
+        // console.log(fun());
+        console.log(fun1());
+
+    </script>
+</body>
+
+</html>
