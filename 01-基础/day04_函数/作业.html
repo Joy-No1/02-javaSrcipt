@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day04作业</title>
+</head>
+
+<body>
+
+    <script>
+        // ### 练习题2：
+        // **要求:**
+
+        // 1. 封装函数, 名字为sum
+        // 2. 功能: 根据传入的两个数,求和并且返回求和的结果（函数必须有return返回值）
+        function sum(x, y) {
+            return x + y;
+        }
+
+
+        // 改错
+        function getsumArr(arr) {
+            let sum = 0
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i]
+            }
+            return sum;
+        }
+        console.log(getsumArr([10, 20, 30, 40]))
+
+        //         ### 练习题5:
+
+        // **目标：** 封装一个函数,可以求任意数组的和 或 平均值
+
+        // - 函数可以传递2个参数，比如  handleData(arr, true)      `handleData 处理数据的意思`
+        //   * 参数一： 接受实参传递过来的数组
+        //   * 参数二:    布尔类型  如果是true或者不传递参数 是求和操作，   如果传递过来的参数是 false 则是求平均值
+        function handleData(arr, bool) {
+            let sum = 0;
+            let avg = 0;
+            if (bool || bool === null) {
+                arr.array.forEach(element => {
+                    sum += element;
+                });
+            } else {
+                arr.array.forEach(element => {
+                    avg = (sum += element) / arr.length;
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
