@@ -1,0 +1,79 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-12 15:36:49
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-12 16:06:49
+ * @FilePath: /02-javaScript/01-基础/day05_对象操作/作业.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div>
+        <ul>
+
+            <script>
+                // 点名: 每次刷新网页运行, 在控制台 随机输出一位同学的名字["老赵", "老李", "小传", "小黑"]，如果输出了，则数组中删除这个名字
+                /* let students = ["老赵", "老李", "小传", "小黑"];
+                let randomIndex = Math.floor(Math.random() * students.length);
+                var selectedStudent = students[randomIndex];
+                console.log("点名: " + selectedStudent);
+                students.splice(randomIndex, 1);
+                // 输出更新后的学生数组到控制台
+                console.log("剩余学生: " + students); */
+
+
+                // ------------------------------
+                //         1. 利用对象数组里面的数据来渲染页面，渲染多个数据
+                // 2. 鼠标经过停留会显示`英雄名字`
+                let datas = [
+                    { name: '司马懿', imgSrc: '01.jpg' },
+                    { name: '女娲', imgSrc: '02.jpg' },
+                    { name: '百里守约', imgSrc: '03.jpg' },
+                    { name: '亚瑟', imgSrc: '04.jpg' },
+                    { name: '虞姬', imgSrc: '05.jpg' },
+                    { name: '张良', imgSrc: '06.jpg' },
+                    { name: '安其拉', imgSrc: '07.jpg' },
+                    { name: '李白', imgSrc: '08.jpg' },
+                    { name: '阿珂', imgSrc: '09.jpg' },
+                    { name: '墨子', imgSrc: '10.jpg' },
+                    { name: '鲁班', imgSrc: '11.jpg' },
+                    { name: '嬴政', imgSrc: '12.jpg' },
+                    { name: '孙膑', imgSrc: '13.jpg' },
+                    { name: '周瑜', imgSrc: '14.jpg' },
+                    { name: 'XXX', imgSrc: '15.jpg' },
+                    { name: 'XXX', imgSrc: '16.jpg' },
+                    { name: 'XXX', imgSrc: '17.jpg' },
+                    { name: 'XXX', imgSrc: '18.jpg' },
+                    { name: 'XXX', imgSrc: '19.jpg' },
+                    { name: 'XXX', imgSrc: '20.jpg' }
+                ];
+
+
+                for (let i = 0; i < datas.length; i++) {
+                    document.write(`
+                        <li>
+                            <a href="#">
+                                <img src=./images/${datas[i].imgSrc} alt="">
+                                <h4>
+                                    ${datas[i].name}
+                                </h4>
+                            </a>
+                        </li>
+                        `);
+                }
+
+            </script>
+        </ul>
+    </div>
+</body>
+
+</html>
