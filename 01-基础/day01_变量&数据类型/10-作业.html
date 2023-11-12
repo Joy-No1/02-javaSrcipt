@@ -1,0 +1,110 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-11-12 11:25:56
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-12 14:41:16
+ * @FilePath: /02-javaScript/01-基础/day01_变量&数据类型/10-作业.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day01-作业</title>
+</head>
+
+<body>
+
+
+    <script>
+        // 1. 打印0 - 20之间的整数, 将每个数输出到控制台
+
+        /*  for (let index = 0; index < 21; index++) {
+             console.log(index);
+         } */
+
+        // 2. 计算1 - 1000之间的累加和，并且打印输出到页面中
+
+        /*  let sum = 0;
+         for (let index = 1; index <= 1000; index++) {
+             sum += index;
+         }
+         console.log(sum); */
+
+        // 3. 页面依次打印 100 - 200之间, 可以被6整除的数字
+
+        /* for (let i = 100; i <= 200; i++) {
+            if (i % 6 == 0) {
+                console.log(i);
+            }
+        } */
+
+        // 4. 用户弹窗输入两个数字，页面输出两个数字中的最大值（请使用三元运算符完成）
+        /*         const a = +prompt("请输入第一个数");
+                const b = +prompt("请输入第二个数");
+                console.log(a > b ? a : b); */
+
+
+        //         5. **用户输入一个数，  计算 1 到这个数的累加和** 
+        //    - 比如 用户输入的是 5， 则计算 1~5 之间的累加和
+        //    - 比如用户输入的是10， 则计算 1~10 之间的累加和
+
+        /*     let num = +prompt('请输入一个整数:');
+            let sum = 0;
+            for (let i = 1; i <= num; i++) {
+                sum += i;
+            }
+            console.log(sum); */
+
+
+
+        // 6. **输出成绩案例（请使用if多分支来书写程序）**
+
+        //    题目描述：
+
+        //    接收用户输入的分数，根据分数输出对应的等级字母 A、B、C、D、E，
+
+        //    - 90分(含)以上 ，输出：A
+        //      80分(含)~ 90 分(不含)，输出：B
+        //       70分(含)~ 80 分(不含)，输出：C
+        //       60分(含)~ 70 分(不含)，输出：D
+        //    - 60分(不含) 以下，输出 E
+
+        /*  let num = prompt('please enter your score');
+         if (num > 90) {
+             console.log('A');
+         } else {
+             console.log('E');
+         } */
+
+        // 7. **输出星期练习（请使用switch分支语句来书写程序）**
+
+        //    题目描述：
+
+        //    请用户输入1个星期数. 就将对应的英文的星期打印出来.
+
+        //    - 比如用户输入'星期一'， 则 页面可以打印  monday
+        //    - 英文自己查有道。比如星期一是  monday  星期二是 tuesday
+
+        // 8. **用户登录验证**
+
+        //    题目描述：
+
+        //    接收用户输入的用户名和密码，若用户名为 “admin” ,且密码为 “123456” ,则提示用户登录成功!  否则，让用户一直输入。
+        // 获取用户输入的用户名和密码
+        var username = prompt("请输入用户名:");
+        var password = prompt("请输入密码:");
+
+        // 检查用户名和密码是否匹配
+        while (username !== "admin" || password !== "123456") {
+            alert("用户名或密码错误，请重新输入。");
+            username = prompt("请输入用户名:");
+            password = prompt("请输入密码:");
+        }
+
+
+    </script>
+</body>
+
+</html>
