@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业</title>
+</head>
+
+<body>
+
+    <script>
+        //         ### 练习题1：
+
+        //         写一个程序，要求如下（★★） 
+
+        // * 需求1：让用户输入五个有效年龄（0 - 100之间），** 放入数组中 **
+
+        //   * 必须输入五个有效年龄年龄，如果是无效年龄，则不能放入数组中
+        //             * 需求2：打印出所有成年人的年龄(数组筛选)
+        //                 * 需求3：打印出所有人总年龄 （累加）
+        // * 需求4：打印出所有人的平均年龄 （累加）
+        // * 需求5：打印出最大年龄和最小年龄 （最大值）
+
+        /* let arr={};
+        for (let i = 0; i < 5; i++) {
+            let num=prompt(`请输入第${i}个数字:`);
+            arr[i]=num<100&&num>0?num:+prompt('请重新输入');
+            console.log(arr);
+        }
+        
+        let total=0;
+        for (let index = 0; index < arr.length; index++) {
+            total+=arr[index];
+            if (arr[index]>18) {
+                console.log(arr[index]);
+            }
+            
+        }
+         */
+
+
+
+
+
+        // ### 练习题2：
+
+        // 找出数组中 元素为10的下标，有则打印该下标，没有则打印 - 1
+
+        //             * 例如: [88, 20, 10, 100, 50]  打印 2
+        //                 * 例如: [88, 20, 30, 100, 50]  打印 - 1
+
+        /* let arr=[88, 20, 10, 100, 50] ;
+        for (let index = 0; index < arr.length; index++) {
+            const element = arr[index];
+            console.log(element===10?index:-1); 
+        } */
+
+        //  ### 练习题3:
+
+        //         使用for循环 - 求出数组元素的和[5, 8, 9, 2, 1, 5]
+        /*     let arr = [5, 8, 9, 2, 1, 5];
+            let sum = 0;
+            for (let index = 0; index < arr.length; index++) {
+                const element = arr[index];
+                sum += arr[index];
+            }
+            console.log(sum); */
+
+
+        // ### 练习题4:
+
+        //         使用for循环 - 求出数组里大于5的i和[4, 9, 5, 20, 3, 11]
+
+
+
+        // ### 练习题5:
+
+        //         使用for循环 - 求出班级里同学们平均年龄[15, 19, 21, 33, 18, 24]
+
+        // ### 练习题6:
+
+        //         计算[2, 6, 18, 15, 40] 中能被3整除的偶数的和
+
+        // ### 练习题7：
+
+        //         计算[2, 6, 18, 15, 40] 中能被3整除的偶数的个数
+        let total = 0;
+        let arr = [2, 6, 18, 15, 40];
+        arr.forEach(item => {
+            if (item % 2 == 0 && item % 3 == 0) {
+                total++;
+            }
+        })
+        console.log(total);
+
+        // ### 练习题8：
+
+        //         给一个数字数组，该数组中有很多数字0，将不为0的数据存入到一个新的数组中
+        let oldArr = [2, 23, 1, 0, 410231, 0, 4, 12041, 1];
+        let newArr = [];
+        oldArr.forEach(item => {
+            if (item != 0) {
+                newArr.push(item);
+            }
+        })
+        console.log(newArr);
+
+    </script>
+</body>
+
+</html>
