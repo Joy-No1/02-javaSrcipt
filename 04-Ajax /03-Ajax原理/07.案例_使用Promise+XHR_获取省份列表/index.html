@@ -1,0 +1,56 @@
+<!--
+ * @Author: joy 1686452422@qq.com
+ * @Date: 2023-06-05 14:54:54
+ * @LastEditors: joy 1686452422@qq.com
+ * @LastEditTime: 2023-11-15 15:35:58
+ * @FilePath: /02-javaScript/04-Ajax /03-Ajax原理/07.案例_使用Promise+XHR_获取省份列表/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>案例_使用Promise+XHR_获取省份列表</title>
+</head>
+
+<body>
+  <p class="my-p"></p>
+  <script>
+    /**
+     * 目标：使用Promise管理XHR请求省份列表
+     *  1. 创建Promise对象
+     *  2. 执行XHR异步代码，获取省份列表
+     *  3. 关联成功或失败函数，做后续处理
+    */
+
+    const promise = new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', 'http://hmajax.itheima.net/api/province');
+      xhr.addEventListener('loadend', () => {
+        //判断成功或者失败
+        // console.log(xhr.response);
+        // console.log(xhr.status);
+        if (xhr.status >= 200 && xhr < 300) {
+          resolve(JSON.parse(xhr.response));
+        } else {
+          reject(new Error(xhr.response));
+        }
+      })
+
+      xhr.send();
+    })
+
+    promise.then(result => {
+      console.log(result);
+      document.querySelector('.my-p').innerHTML = result.list.join('<br>');
+    }).catch(error => {
+      document.querySelector('.my-p').innerHTML = error.message;
+      console.dir(error);
+    })
+
+  </script>
+</body>
+
+</html>
